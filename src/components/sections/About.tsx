@@ -24,7 +24,7 @@ const About = () => {
         >
             <div className="container mx-auto px-6 text-center">
                 <Reveal>
-                    <h3 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 mb-6 pb-3">
+                    <h3 className="text-5xl font-bold text-white mb-4 tracking-tight border-b-4 border-gradient-to-r from-blue-400 to-purple-500 inline-block pb-2">
                         About Me
                     </h3>
                 </Reveal>

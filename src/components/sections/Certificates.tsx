@@ -1,6 +1,6 @@
 'use client';
 
-import { FaCode, FaServer } from 'react-icons/fa';
+import { FaCode, FaNetworkWired, FaServer } from 'react-icons/fa';
 import CertificateCard from '../ui/CertificateCard';
 import Reveal from '@/components/ui/Reveal';
 
@@ -25,6 +25,14 @@ const certificatesData = [
         link: 'https://www.hackerrank.com/certificates/4e572f857b2b',
         gradient: 'from-yellow-400 to-orange-500',
         icon: <FaCode className="text-white text-xl" />,
+    },
+    {
+        title: 'Rest API (Intermediate) Certificate',
+        provider: 'HackerRank',
+        link: 'https://www.hackerrank.com/certificates/395b7c3874f2',
+        gradient: 'from-blue-500 to-indigo-600',
+
+        icon: <FaNetworkWired className="text-white text-xl" />, // ← или любую другую из списка
     },
 ];
 
