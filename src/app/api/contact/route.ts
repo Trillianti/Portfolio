@@ -5,12 +5,12 @@ export async function POST(request: Request) {
         const { name, email, subject, message } = await request.json();
 
         const text = `
-💬 Новое сообщение с сайта:
+💬 New message from site:
 
-👤 Имя: ${name}
+👤 Name: ${name}
 📧 Email: ${email}
-📝 Тема: ${subject}
-🖊️ Сообщение:
+📝 Theme: ${subject}
+🖊️ Message:
 ${message}
         `;
 

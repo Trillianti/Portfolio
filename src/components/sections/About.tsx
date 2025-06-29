@@ -1,8 +1,22 @@
 'use client';
+
 import Link from 'next/link';
 import Reveal from '@/components/ui/Reveal';
 
 const About = () => {
+    const birthDate = new Date('2008-11-04');
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    const hasHadBirthdayThisYear =
+        today.getMonth() > birthDate.getMonth() ||
+        (today.getMonth() === birthDate.getMonth() &&
+            today.getDate() >= birthDate.getDate());
+
+    if (!hasHadBirthdayThisYear) {
+        age--;
+    }
     return (
         <section
             id="about"
@@ -23,20 +37,22 @@ const About = () => {
 
                 <Reveal delay={0.2}>
                     <p className="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
-                        I&apos;m a backend-focused software engineer passionate
-                        about building robust and scalable server-side systems.
-                        I enjoy crafting clean architectures, managing complex
-                        databases, and creating efficient APIs that drive
-                        real-world applications.
+                        I&apos;m a {age}-year-old backend developer from
+                        Ukraine, currently based in Ukraine. With a strong
+                        passion for clean architecture and scalable systems, I
+                        focus on crafting robust APIs, efficient databases, and
+                        well-structured backend services.
                     </p>
                 </Reveal>
 
                 <Reveal delay={0.3}>
                     <p className="max-w-3xl mx-auto mt-5 text-gray-400 text-base">
-                        My journey began with curiosity about backend logic and
-                        data structures. Today, it’s evolved into a mission to
-                        deliver reliable solutions that scale and empower users
-                        worldwide.
+                        My background blends software engineering with
+                        real-world problem solving. I’ve contributed to startups
+                        and freelance projects where reliability, performance,
+                        and clarity mattered most. Now, I’m open to new
+                        challenges where I can grow as an engineer and bring
+                        meaningful value to teams and users.
                     </p>
                 </Reveal>
 
@@ -52,6 +68,10 @@ const About = () => {
                                     Dmytro Shatokhin
                                 </li>
                                 <li>
+                                    <span className="text-blue-400">Age:</span>{' '}
+                                    {age}
+                                </li>
+                                <li>
                                     <span className="text-blue-400">
                                         Email:
                                     </span>{' '}
@@ -61,7 +81,7 @@ const About = () => {
                                     <span className="text-blue-400">
                                         Location:
                                     </span>{' '}
-                                    Ukraine, Cherkasy
+                                    Ukraine
                                 </li>
                             </ul>
                         </div>
