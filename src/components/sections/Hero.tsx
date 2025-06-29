@@ -11,7 +11,7 @@ const Hero = () => {
                 <Reveal delay={0}>
                     <div className="text-center md:text-left">
                         <h2 className="text-5xl font-extrabold mb-4 leading-tight">
-                            Hi, I’m <br />
+                            Hi, I&apos;m <br />
                             <span className="text-blue-400">
                                 Dmytro Shatokhin
                             </span>

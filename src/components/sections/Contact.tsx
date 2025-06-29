@@ -50,7 +50,7 @@ const Contact = () => {
                         </h3>
                         <p className="text-gray-400 max-w-md">
                             Have a project in mind or want to discuss potential
-                            opportunities? I'd love to hear from you!
+                            opportunities? I&apos;d love to hear from you!
                         </p>
                         <div className="space-y-4 text-gray-300">
                             <div className="flex items-center gap-4">

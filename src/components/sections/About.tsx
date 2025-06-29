@@ -23,8 +23,8 @@ const About = () => {
 
                 <Reveal delay={0.2}>
                     <p className="max-w-3xl mx-auto text-gray-300 leading-relaxed">
-                        I'm a backend-focused software engineer with a strong
-                        foundation in scalable architecture and modern
+                        I&apos;m a backend-focused software engineer with a
+                        strong foundation in scalable architecture and modern
                         server-side technologies. I enjoy designing reliable
                         APIs, managing databases efficiently, and building
                         systems that handle real-world complexity with clarity
