@@ -37,10 +37,7 @@ const Contact = () => {
     };
 
     return (
-        <section
-            id="contact"
-            className="bg-[#0F172A] py-24 snap-start text-white"
-        >
+        <section id="contact" className="bg-[#0F172A] py-24  text-white">
             <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
                 {/* LEFT - Info */}
                 <Reveal>

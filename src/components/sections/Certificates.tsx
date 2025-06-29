@@ -30,7 +30,7 @@ const Certificates = () => {
     return (
         <section
             id="certificates"
-            className="bg-[#1E293B] py-24 min-h-screen flex justify-center items-center snap-start"
+            className="bg-[#1E293B] py-24 min-h-screen flex justify-center items-center "
         >
             <div className="container mx-auto px-6 text-center">
                 <Reveal>

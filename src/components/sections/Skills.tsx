@@ -47,7 +47,7 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="bg-[#0F172A] py-24 min-h-screen flex justify-center items-center snap-start"
+            className="bg-[#0F172A] py-24 min-h-screen flex justify-center items-center "
         >
             <div className="container mx-auto px-6 text-center">
                 <Reveal delay={0}>
