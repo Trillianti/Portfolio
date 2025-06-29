@@ -6,7 +6,7 @@ import Reveal from '@/components/ui/Reveal';
 
 const Hero = () => {
     return (
-        <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1E293B] to-[#0F172A] flex items-center justify-center min-h-screen pt-32 snap-start">
+        <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1E293B] to-[#0F172A] flex items-center justify-center py-32 snap-start">
             <div className="container mx-auto grid md:grid-cols-2 items-center px-8">
                 <Reveal delay={0}>
                     <div className="text-center md:text-left">

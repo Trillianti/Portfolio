@@ -8,8 +8,13 @@ import Certificates from '@/components/sections/Certificates';
 import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
+import { useEffect } from 'react';
 
 export default function HomePage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main
             className="h-screen overflow-y-scroll scroll-smooth bg-[#0F172A] text-white font-sans 
