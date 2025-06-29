@@ -1,3 +1,5 @@
+'use client';
+
 import { FaCode, FaServer } from 'react-icons/fa';
 import CertificateCard from '../ui/CertificateCard';
 import Reveal from '@/components/ui/Reveal';
@@ -30,19 +32,20 @@ const Certificates = () => {
     return (
         <section
             id="certificates"
-            className="bg-[#1E293B] py-24 min-h-screen flex justify-center items-center "
+            className="relative z-10 bg-gradient-to-br from-[#0F172A] to-[#1E293B] py-24 min-h-screen flex justify-center items-center"
         >
             <div className="container mx-auto px-6 text-center">
                 <Reveal>
-                    <h3 className="text-4xl font-extrabold text-white mb-4 tracking-tight border-b-4 border-blue-500 inline-block pb-2">
+                    <h3 className="text-5xl font-bold text-white mb-6 tracking-tight border-b-4 border-gradient-to-r from-green-400 to-blue-500 inline-block pb-2">
                         Certificates
                     </h3>
                 </Reveal>
 
                 <Reveal delay={0.1}>
-                    <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
-                        Verified achievements that reflect my growth,
-                        specialization, and continuous passion for learning.
+                    <p className="text-gray-300 mb-14 max-w-2xl mx-auto text-lg leading-relaxed">
+                        Verified achievements reflecting my growth,
+                        specialization, and ongoing passion for mastering modern
+                        technologies.
                     </p>
                 </Reveal>
 

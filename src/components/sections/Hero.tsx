@@ -6,8 +6,15 @@ import Reveal from '@/components/ui/Reveal';
 
 const Hero = () => {
     return (
-        <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1E293B] to-[#0F172A] flex items-center justify-center py-32 ">
-            <div className="container mx-auto grid md:grid-cols-2 items-center px-8">
+        <section
+            id="home"
+            className="relative min-h-screen flex items-center justify-center py-32 overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1E293B] to-[#0F172A]"
+        >
+            {/* Полупрозрачный фон с клетками */}
+            <div className="absolute inset-0 z-0 bg-[length:40px_40px] bg-[repeating-linear-gradient(0deg,_rgba(255,255,255,0.03)_0px,_rgba(255,255,255,0.03)_1px,_transparent_1px,_transparent_40px),repeating-linear-gradient(90deg,_rgba(255,255,255,0.03)_0px,_rgba(255,255,255,0.03)_1px,_transparent_1px,_transparent_40px)]" />
+
+            {/* Контент поверх */}
+            <div className="relative z-10 container mx-auto grid md:grid-cols-2 items-center px-8">
                 <Reveal delay={0}>
                     <div className="text-center md:text-left">
                         <h2 className="text-5xl font-extrabold mb-4 leading-tight">
@@ -42,13 +49,19 @@ const Hero = () => {
 
                 <Reveal delay={0.2}>
                     <div className="mt-10 md:mt-0 flex justify-center">
-                        <Image
-                            src="/dmytro.JPG"
-                            alt="Dmytro Shatokhin"
-                            width={350}
-                            height={350}
-                            className="rounded-xl w-[350px] h-[350px] object-cover shadow-xl border-4 border-blue-600"
-                        />
+                        <div className="relative w-[350px] h-[350px] rounded-xl">
+                            {/* Градієнтне світіння позаду зображення */}
+                            <div className="absolute -inset-1 rounded-xl bg-gradient-to-tr from-blue-500 via-purple-500 to-indigo-500 blur-lg opacity-50 animate-pulse"></div>
+
+                            {/* Основне зображення */}
+                            <Image
+                                src="/dmytro.JPG"
+                                alt="Dmytro Shatokhin"
+                                width={350}
+                                height={350}
+                                className="relative z-10 rounded-xl object-cover w-full h-full shadow-xl"
+                            />
+                        </div>
                     </div>
                 </Reveal>
             </div>

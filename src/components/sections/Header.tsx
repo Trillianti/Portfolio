@@ -1,57 +1,62 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import clsx from 'clsx';
 
+const navLinks = [
+    { href: '#home', label: 'home' },
+    { href: '#about', label: 'about' },
+    { href: '#skills', label: 'skills' },
+    { href: '#certificates', label: 'certificates' },
+    { href: '#projects', label: 'projects' },
+    { href: '#contact', label: 'contact' },
+];
+
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
-    return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-[#1E293B]/40 backdrop-blur-md border-b border-white/10 shadow-sm">
-            <div className="container mx-auto flex justify-between items-center px-6 py-4">
-                <h1 className="text-lg sm:text-xl font-bold tracking-wide text-white hover:text-blue-400 transition">
-                    Dmytro Shatokhin
-                </h1>
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-                {/* Desktop Navigation */}
-                <nav className="hidden md:flex space-x-6 text-sm text-gray-300">
-                    <Link href="#" className="hover:text-white transition">
-                        home
-                    </Link>
-                    <Link href="#about" className="hover:text-white transition">
-                        about
-                    </Link>
-                    <Link
-                        href="#skills"
-                        className="hover:text-white transition"
-                    >
-                        skills
-                    </Link>
-                    <Link
-                        href="#certificates"
-                        className="hover:text-white transition"
-                    >
-                        certificates
-                    </Link>
-                    <Link
-                        href="#projects"
-                        className="hover:text-white transition"
-                    >
-                        projects
-                    </Link>
-                    <Link
-                        href="#contact"
-                        className="hover:text-white transition"
-                    >
-                        contact
-                    </Link>
+    return (
+        <header
+            className={clsx(
+                'fixed top-0 left-0 w-full z-50 transition-all duration-300',
+                'bg-[#0F172A]/40 backdrop-blur-md border-b border-white/10 shadow-sm'
+            )}
+        >
+            <div className="container mx-auto flex justify-between items-center px-6 py-4">
+                <Link
+                    href="#home"
+                    className="text-xl font-extrabold tracking-wide bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent hover:opacity-90 transition"
+                >
+                    Dmytro Shatokhin
+                </Link>
+
+                {/* Desktop Nav */}
+                <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="hover:text-white transition-colors"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </nav>
 
-                {/* Mobile Menu Toggle */}
+                {/* Mobile Toggle */}
                 <div className="md:hidden text-white">
                     <button onClick={toggleMenu} aria-label="Toggle Menu">
                         {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -59,30 +64,27 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Mobile Menu (Animated) */}
+            {/* Mobile Menu */}
             <div
                 className={clsx(
-                    'md:hidden bg-[#1E293B] px-6 overflow-hidden transition-all duration-300 ease-in-out',
-                    menuOpen ? 'max-h-96 opacity-100 py-4' : 'max-h-0 opacity-0'
+                    'md:hidden bg-[#1E293B]/90 backdrop-blur-md px-6 transition-all duration-300 ease-in-out',
+                    menuOpen
+                        ? 'max-h-96 py-4 opacity-100'
+                        : 'max-h-0 py-0 opacity-0 overflow-hidden'
                 )}
             >
-                {[
-                    { href: '#', label: 'home' },
-                    { href: '#about', label: 'about' },
-                    { href: '#skills', label: 'skills' },
-                    { href: '#certificates', label: 'certificates' },
-                    { href: '#projects', label: 'projects' },
-                    { href: '#contact', label: 'contact' },
-                ].map((link) => (
-                    <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => setMenuOpen(false)}
-                        className="block py-2 text-sm text-gray-300 hover:text-white transition"
-                    >
-                        {link.label}
-                    </Link>
-                ))}
+                <div className="flex flex-col gap-2">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={() => setMenuOpen(false)}
+                            className="text-gray-300 hover:text-white py-2 text-base transition"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+                </div>
             </div>
         </header>
     );

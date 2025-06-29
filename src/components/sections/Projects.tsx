@@ -12,7 +12,7 @@ const projects = [
         tech: ['Next.js', 'TailwindCSS', 'Framer Motion'],
         image: '/projects/portfolio.png',
         github: 'https://github.com/Trillianti/Portfolio',
-        live: 'https://yourportfolio.com',
+        live: 'https://portfolio-trilliantis-projects.vercel.app/',
     },
     {
         title: 'RealWorld API Clone',
@@ -29,11 +29,11 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="py-24 min-h-screen flex justify-center items-center "
+            className="py-24 min-h-screen flex justify-center items-center bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
         >
             <div className="container mx-auto px-6 text-center">
                 <Reveal>
-                    <h3 className="text-4xl font-bold text-white mb-4 tracking-tight border-b-4 border-blue-500 inline-block pb-2">
+                    <h3 className="text-5xl font-bold text-white mb-4 tracking-tight border-b-4 border-gradient-to-r from-green-400 to-blue-500 inline-block pb-2">
                         Projects
                     </h3>
                 </Reveal>
@@ -45,43 +45,43 @@ const Projects = () => {
                     </p>
                 </Reveal>
 
-                <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-8 mt-6">
+                <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-10 mt-6">
                     {projects.map((project, idx) => (
                         <Reveal key={idx} delay={0.2 + idx * 0.1}>
-                            <div className="bg-[#0F172A] rounded-xl border border-white/10 shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col">
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    width={500}
-                                    height={300}
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="p-6 flex flex-col flex-1 justify-between">
-                                    <div>
-                                        <h4 className="text-xl font-semibold text-white mb-2">
-                                            {project.title}
-                                        </h4>
-                                        <p className="text-gray-300 text-sm mb-4">
-                                            {project.description}
-                                        </p>
-                                        <div className="flex flex-wrap gap-2 text-sm text-blue-300 mb-4">
-                                            {project.tech.map((tech, i) => (
-                                                <span
-                                                    key={i}
-                                                    className="bg-blue-900/30 px-2 py-1 rounded"
-                                                >
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
+                            <div className="group bg-[#0F172A] rounded-2xl overflow-hidden border border-white/10 hover:border-blue-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/10">
+                                <div className="relative">
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        width={600}
+                                        height={350}
+                                        className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                    />
+                                </div>
+                                <div className="p-6 text-left flex flex-col h-full">
+                                    <h4 className="text-white text-2xl font-semibold mb-2">
+                                        {project.title}
+                                    </h4>
+                                    <p className="text-gray-400 text-sm mb-4">
+                                        {project.description}
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 mb-6">
+                                        {project.tech.map((tech, i) => (
+                                            <span
+                                                key={i}
+                                                className="bg-blue-600/20 text-blue-300 text-xs px-3 py-1 rounded-full"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
                                     </div>
-                                    <div className="flex gap-4 text-blue-400 mt-auto">
+                                    <div className="mt-auto flex gap-4 text-blue-400">
                                         {project.github && (
                                             <a
                                                 href={project.github}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="hover:text-blue-500 transition"
+                                                className="hover:text-white transition"
                                             >
                                                 <FaGithub size={18} />
                                             </a>
@@ -91,7 +91,7 @@ const Projects = () => {
                                                 href={project.live}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="hover:text-blue-500 transition"
+                                                className="hover:text-white transition"
                                             >
                                                 <FaExternalLinkAlt size={18} />
                                             </a>
