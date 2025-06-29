@@ -16,22 +16,22 @@ export default function HomePage() {
             md:snap-y md:snap-mandatory"
         >
             <Header />
-            <section className="md:snap-start h-screen">
+            <section className="md:snap-start  ">
                 <Hero />
             </section>
-            <section className="md:snap-start h-screen">
+            <section className="md:snap-start  ">
                 <About />
             </section>
-            <section className="md:snap-start h-screen">
+            <section className="md:snap-start  ">
                 <Skills />
             </section>
-            <section className="md:snap-start h-screen">
+            <section className="md:snap-start  ">
                 <Certificates />
             </section>
-            <section className="md:snap-start h-screen">
+            <section className="md:snap-start  ">
                 <Projects />
             </section>
-            <section className="md:snap-start h-screen">
+            <section className="md:snap-start  ">
                 <Contact />
             </section>
             <Footer />
