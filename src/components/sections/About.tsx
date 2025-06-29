@@ -68,10 +68,6 @@ const About = () => {
                                     Dmytro Shatokhin
                                 </li>
                                 <li>
-                                    <span className="text-blue-400">Age:</span>{' '}
-                                    {age}
-                                </li>
-                                <li>
                                     <span className="text-blue-400">
                                         Email:
                                     </span>{' '}
