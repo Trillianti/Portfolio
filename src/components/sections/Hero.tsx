@@ -25,7 +25,7 @@ const Hero = () => {
                             ,<br />
                             Backend Developer
                         </h2>
-                        <p className="text-gray-400 mt-4 max-w-md">
+                        <p className="text-gray-400 mt-4 md:max-w-[500px] text-center md:text-left">
                             I build scalable backend systems with clean
                             architecture, strong database design, and efficient
                             APIs.
@@ -49,7 +49,7 @@ const Hero = () => {
 
                 <Reveal delay={0.2}>
                     <div className="mt-10 md:mt-0 flex justify-center">
-                        <div className="relative w-[350px] h-[350px] rounded-xl">
+                        <div className="relative md:w-[350px] md:h-[350px] w-[300px] h-[300px] rounded-xl">
                             {/* Градієнтне світіння позаду зображення */}
                             <div className="absolute -inset-1 rounded-xl bg-gradient-to-tr from-blue-500 via-purple-500 to-indigo-500 blur-lg opacity-50 animate-pulse"></div>
 
@@ -57,8 +57,8 @@ const Hero = () => {
                             <Image
                                 src="/dmytro.JPG"
                                 alt="Dmytro Shatokhin"
-                                width={350}
-                                height={350}
+                                width={1000}
+                                height={1000}
                                 className="relative z-10 rounded-xl object-cover w-full h-full shadow-xl"
                             />
                         </div>
