@@ -7,19 +7,6 @@ import Reveal from '../ui/Reveal';
 const Skills = () => {
     const skills = [
         {
-            title: 'Frontend',
-            icon: <FaCode className="text-blue-400 text-2xl" />,
-            items: [
-                'HTML5',
-                'CSS3',
-                'JavaScript',
-                'React',
-                'Next.js',
-                'TypeScript',
-                'TailwindCSS',
-            ],
-        },
-        {
             title: 'Backend',
             icon: <FaServer className="text-green-400 text-2xl" />,
             items: [
@@ -41,6 +28,19 @@ const Skills = () => {
             title: 'Programming',
             icon: <FaCodeBranch className="text-yellow-400 text-2xl" />,
             items: ['JavaScript', 'TypeScript', 'Python', 'SQL'],
+        },
+        {
+            title: 'Frontend',
+            icon: <FaCode className="text-blue-400 text-2xl" />,
+            items: [
+                'HTML5',
+                'CSS3',
+                'JavaScript',
+                'React',
+                'Next.js',
+                'TypeScript',
+                'TailwindCSS',
+            ],
         },
     ];
 

@@ -3,12 +3,11 @@ import Reveal from '@/components/ui/Reveal';
 
 const experiences = [
     {
-        title: 'Debet Plus Pro',
+        title: 'DebetPro',
         company: 'Self-employed',
         location: 'Ukraine',
         period: '2024 – now',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'Business applications development',
     },
 ];
 
