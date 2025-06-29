@@ -20,9 +20,9 @@ const Hero = () => {
                         <h2 className="text-5xl font-extrabold mb-4 leading-tight">
                             Hi, I&apos;m <br />
                             <span className="text-blue-400">
-                                Dmytro Shatokhin
+                                Dmytro Shatokhin,
                             </span>
-                            ,<br />
+                            <br />
                             Backend Developer
                         </h2>
                         <p className="text-gray-400 mt-4 md:max-w-[500px] text-center md:text-left">
