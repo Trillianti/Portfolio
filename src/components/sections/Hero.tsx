@@ -43,7 +43,7 @@ const Hero = () => {
                 <Reveal delay={0.2}>
                     <div className="mt-10 md:mt-0 flex justify-center">
                         <Image
-                            src="/dmytro.jpg"
+                            src="/dmytro.JPG"
                             alt="Dmytro Shatokhin"
                             width={350}
                             height={350}
