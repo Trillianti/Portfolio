@@ -29,7 +29,7 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="py-24 h-screen flex justify-center items-center snap-start"
+            className="py-24 min-h-screen flex justify-center items-center snap-start"
         >
             <div className="container mx-auto px-6 text-center">
                 <Reveal>

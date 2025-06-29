@@ -11,24 +11,27 @@ import Footer from '@/components/sections/Footer';
 
 export default function HomePage() {
     return (
-        <main className="min-h-screen bg-[#0F172A] text-white font-sans snap-y snap-mandatory snap-always overflow-y-scroll h-screen scroll-smooth">
+        <main
+            className="h-screen overflow-y-scroll scroll-smooth bg-[#0F172A] text-white font-sans 
+            md:snap-y md:snap-mandatory"
+        >
             <Header />
-            <section className="snap-start">
+            <section className="md:snap-start h-screen">
                 <Hero />
             </section>
-            <section className="snap-start">
+            <section className="md:snap-start h-screen">
                 <About />
             </section>
-            <section className="snap-start">
+            <section className="md:snap-start h-screen">
                 <Skills />
             </section>
-            <section className="snap-start">
+            <section className="md:snap-start h-screen">
                 <Certificates />
             </section>
-            <section className="snap-start">
+            <section className="md:snap-start h-screen">
                 <Projects />
             </section>
-            <section className="snap-start">
+            <section className="md:snap-start h-screen">
                 <Contact />
             </section>
             <Footer />
