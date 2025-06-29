@@ -1,7 +1,7 @@
 'use client';
 
 import { FaServer, FaCode, FaTools, FaCodeBranch } from 'react-icons/fa';
-import SkillGroup from '../ui/SkillGroupCard';
+// import SkillGroup from '../ui/SkillGroupCard';
 import Reveal from '../ui/Reveal';
 
 const Skills = () => {
