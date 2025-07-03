@@ -32,7 +32,8 @@ const Hero = () => {
                         </p>
                         <div className="flex justify-center md:justify-start gap-4 mt-6">
                             <Link
-                                href="#"
+                                href="/cv.pdf"
+                                target="_blank"
                                 className="px-5 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-medium shadow transition"
                             >
                                 Open CV

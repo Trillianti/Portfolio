@@ -38,10 +38,10 @@ const About = () => {
                 <Reveal delay={0.2}>
                     <p className="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
                         I&apos;m a {age}-year-old backend developer from
-                        Ukraine, currently based in Ukraine. With a strong
-                        passion for clean architecture and scalable systems, I
-                        focus on crafting robust APIs, efficient databases, and
-                        well-structured backend services.
+                        Ukraine. With a strong passion for clean architecture
+                        and scalable systems, I focus on crafting robust APIs,
+                        efficient databases, and well-structured backend
+                        services.
                     </p>
                 </Reveal>
 
@@ -114,7 +114,7 @@ const About = () => {
 
                 <Reveal delay={0.6}>
                     <Link
-                        href="/resume.pdf"
+                        href="/cv.pdf"
                         target="_blank"
                         className="mt-12 inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
                     >
